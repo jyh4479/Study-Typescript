@@ -9,6 +9,7 @@ const Logo: React.FunctionComponent<LogoProps> = props => {
     const MyInstaLogo = styled.div`
     font-family: SDSOutline;
     font-size: 50px;
+    width:33.3%;
     `
     return(
         <MyInstaLogo>{props.title}</MyInstaLogo>

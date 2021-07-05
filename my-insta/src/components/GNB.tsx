@@ -1,12 +1,25 @@
 import React from "react"
 import {Link} from "react-router-dom";
-import {Logo} from "./index";
+import {ButtonList, Logo, SearchBar} from "./index";
 import styled from "styled-components";
 
 const GNB = () => {
+
+    const Top = styled.nav`
+    display:flex;
+    
+    background-color:skyblue;
+    `
+
     return (
         <>
-            <Logo title={'MyInsta!'}/>
+            <Top>
+                <Logo title={'MyInsta!'}/>
+                <SearchBar></SearchBar>
+                <ButtonList></ButtonList>
+            </Top>
+
+
             <ul>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='mountain'>Mountain</Link></li>
