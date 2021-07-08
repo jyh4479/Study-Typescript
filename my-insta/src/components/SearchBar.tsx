@@ -61,11 +61,30 @@ const SearchBar = () => {
     width: 100%;
     `
 
-    return(
+    const SearchBoxSpanWrap = styled.div`
+        display: inline;
+    left: -5px;
+    
+    -webkit-box-align: stretch;
+        align-items: stretch;
+    border: 0 solid #000;
+    box-sizing: border-box;
+        -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    lex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    `
+
+    return (
         <SearchGrid>
             <SearchBox>
                 <SearchInput placeholder='검색'></SearchInput>
-                <SearchBoxInner></SearchBoxInner>
+                <SearchBoxInner>
+                    <SearchBoxSpanWrap></SearchBoxSpanWrap>
+                </SearchBoxInner>
             </SearchBox>
         </SearchGrid>
     )
