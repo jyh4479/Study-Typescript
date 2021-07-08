@@ -4,15 +4,15 @@ import styled from "styled-components";
 const SearchBar = () => {
 
     const SearchGrid = styled.div`
-    width:33.3%
+    width:33.3%;
     `
 
     const SearchBox = styled.div`
-    height:28px
-    -webkit-box-flex: 0
-    flex: 0 1 auto
-    min-width: 125px
-    width: 215px
+    height:28px;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+    min-width: 125px;
+    width: 215px;
     
     -webkit-box-align: stretch;
     align-items: stretch;
@@ -29,15 +29,23 @@ const SearchBar = () => {
     `
 
     const SearchInput = styled.input`
-    border: solid 1px rgba(var(--b6a,219,219,219),1)
-    border-radius: 3px
-    color: rgba(var(--i1d,38,38,38),1)
-    outline: 0
-    padding: 3px 10px 3px 26px
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    color: rgba(var(--i1d,38,38,38),1);
+    outline: 0;
+    padding: 3px 10px 3px 26px;
     
-    box-sizing: border-box
-    height: 100%
-    width: 100%
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    
+    -webkit-appearance: none;
+    background: rgba(var(--b3f,250,250,250),1);
+    font-size: 16px;
+    
+    line-height: 18px;
+    
+    
     `
 
     const SearchBoxInner = styled.div`
@@ -62,14 +70,14 @@ const SearchBar = () => {
     `
 
     const SearchBoxSpanWrap = styled.div`
-        display: inline;
+    display: inline;
     left: -5px;
     
     -webkit-box-align: stretch;
-        align-items: stretch;
+    align-items: stretch;
     border: 0 solid #000;
     box-sizing: border-box;
-        -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
     lex-shrink: 0;
@@ -78,12 +86,23 @@ const SearchBar = () => {
     position: relative;
     `
 
+    const SearchBoxSpan = styled.span`
+    display: inline-block;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+    `
+
     return (
         <SearchGrid>
             <SearchBox>
-                <SearchInput placeholder='검색'></SearchInput>
+                <SearchInput placeholder='검색' type='text' autoCapitalize='none'></SearchInput>
                 <SearchBoxInner>
-                    <SearchBoxSpanWrap></SearchBoxSpanWrap>
+                    <SearchBoxSpanWrap>
+                        <SearchBoxSpan>검색</SearchBoxSpan>
+                    </SearchBoxSpanWrap>
                 </SearchBoxInner>
             </SearchBox>
         </SearchGrid>
