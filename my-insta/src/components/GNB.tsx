@@ -7,7 +7,6 @@ const GNB = () => {
 
     const Top = styled.nav`
     display:flex;
-    
     background-color:skyblue;
     `
 

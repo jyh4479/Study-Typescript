@@ -9,23 +9,20 @@ const SearchBar = () => {
 
     const SearchBox = styled.div`
     height:28px;
-    -webkit-box-flex: 0;
     flex: 0 1 auto;
     min-width: 125px;
     width: 215px;
     
-    -webkit-box-align: stretch;
     align-items: stretch;
     border: 0 solid #000;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: 0;
     padding: 0;
     position: relative;
     
     font: inherit;
-    vertical-align: baseline;
+    margin: auto;
     `
 
     const SearchInput = styled.input`
@@ -38,8 +35,7 @@ const SearchBar = () => {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    
-    -webkit-appearance: none;
+
     background: rgba(var(--b3f,250,250,250),1);
     font-size: 16px;
     
@@ -67,18 +63,17 @@ const SearchBar = () => {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
+    
+    //background: rgba(var(--b3f,250,250,250),1);
     `
 
     const SearchBoxSpanWrap = styled.div`
     display: inline;
     left: -5px;
     
-    -webkit-box-align: stretch;
     align-items: stretch;
     border: 0 solid #000;
     box-sizing: border-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
     lex-shrink: 0;
     margin: 0;
