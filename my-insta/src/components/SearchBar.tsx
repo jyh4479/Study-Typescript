@@ -64,6 +64,9 @@ const SearchBar = () => {
     height: 100%;
     width: 100%;
     
+    
+    background:green;
+    //background:#fafafa;
     //background: rgba(var(--b3f,250,250,250),1);
     `
 
@@ -79,6 +82,8 @@ const SearchBar = () => {
     margin: 0;
     padding: 0;
     position: relative;
+    
+    
     `
 
     const SearchBoxSpan = styled.span`
