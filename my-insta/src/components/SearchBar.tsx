@@ -71,7 +71,6 @@ const SearchBar = () => {
     `
 
     const SearchBoxSpanWrap = styled.div`
-    display: inline;
     left: -5px;
     
     align-items: stretch;
@@ -82,7 +81,6 @@ const SearchBar = () => {
     margin: 0;
     padding: 0;
     position: relative;
-    
     
     `
 
@@ -99,7 +97,7 @@ const SearchBar = () => {
         <SearchGrid>
             <SearchBox>
                 <SearchInput placeholder='검색' type='text' autoCapitalize='none'></SearchInput>
-                <SearchBoxInner>
+                <SearchBoxInner role='button' tabIndex={0}>
                     <SearchBoxSpanWrap>
                         <SearchBoxSpan>검색</SearchBoxSpan>
                     </SearchBoxSpanWrap>
