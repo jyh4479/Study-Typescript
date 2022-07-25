@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import {useEffect} from 'react'
 import './App.css'
+import {HeadHunter} from "./test-entity/HeadHunter";
+import {Developer} from "./test-entity/Developer";
+import {Team} from "./test-entity/Team";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    useEffect(() => {
+        const job1 = new HeadHunter("김동찬");
+        const job2 = new HeadHunter("김영진");
+        const job3 = new Developer("이우영");
+        const job4 = new Developer("정용훈");
+
+        const myList = [job1, job2, job3, job4];
+
+        const donboTeam = new Team(myList);
+
+        donboTeam.checkTeam();
+    }, [])
+
+    return (
+        <div className="App">
+            Team Test!
+        </div>
+    )
 }
 
 export default App
