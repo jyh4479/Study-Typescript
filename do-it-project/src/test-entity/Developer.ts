@@ -1,6 +1,7 @@
 import {Job} from "./Job";
+import {Food} from "./Food";
 
-export class Developer implements Job {
+export class Developer implements Job, Food {
     name: string;
 
     constructor(name: string) {
@@ -9,5 +10,13 @@ export class Developer implements Job {
 
     work() {
         console.log(`I'm Developer ${this.name}`);
+    }
+
+    eatFood() {
+        console.log("Eat Food");
+    }
+
+    makeFood() {
+        console.log("Make Food");
     }
 }
